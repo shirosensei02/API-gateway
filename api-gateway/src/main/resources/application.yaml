@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+        - id: get-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/tournaments/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':  # CORS configuration for all paths
+            allowedOrigins: "http://localhost:8081"  # Allow frontend origin
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: "*"
+            allowCredentials: true
