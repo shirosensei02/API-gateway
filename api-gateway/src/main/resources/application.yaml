@@ -4,14 +4,20 @@ spring:
       enabled: true
     gateway:
       routes:
-        - id: get-route
+        - id: tournament-route
           uri: http://localhost:8082
           predicates:
             - Path=/tournaments/**
+
+        - id: matchmaking-route
+          uri: http://localhost:8083
+          predicates:
+            - Path=/matchmaking/**
+
       globalcors:
         corsConfigurations:
-          '[/**]':  # CORS configuration for all paths
-            allowedOrigins: "http://localhost:8081"  # Allow frontend origin
+          "[/**]": # CORS configuration for all paths
+            allowedOrigins: "http://localhost:8081" # Allow frontend origin
             allowedMethods:
               - GET
               - POST
