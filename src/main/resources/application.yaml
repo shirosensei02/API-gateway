@@ -17,7 +17,7 @@ spring:
       globalcors:
         corsConfigurations:
           "[/**]": # CORS configuration for all paths
-            allowedOrigins: "http://localhost:8081" # Allow frontend origin
+            allowedOrigins: "https://tournamnet-matchmaking-user-service.azuremicroservices.io" # Allow frontend origin
             allowedMethods:
               - GET
               - POST
