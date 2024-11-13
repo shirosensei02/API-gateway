@@ -14,6 +14,7 @@ spring:
           predicates:
             - Path=/matchmaking/**
 
+
       globalcors:
         corsConfigurations:
           "[/**]": # CORS configuration for all paths
