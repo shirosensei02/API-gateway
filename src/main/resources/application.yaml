@@ -15,6 +15,7 @@ spring:
             - Path=/matchmaking/**
 
 
+
       globalcors:
         corsConfigurations:
           "[/**]": # CORS configuration for all paths
